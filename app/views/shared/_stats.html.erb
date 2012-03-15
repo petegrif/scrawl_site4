@@ -12,4 +12,11 @@
     </strong>
     followers
   </a>
+  <a href="<%= user_path(current_user) %>">
+    <strong id="scrawls" class="stat">
+      <%= @user.scrawls.count %>
+    </strong>
+    scrawls
+  </a>
 </div>
+

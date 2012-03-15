@@ -2,19 +2,19 @@
 <div class="row">
   <aside class="span4">
     <section>
-      <%= render 'shared/grav_name' %>
+      <%= render 'shared/grav_name'             %>
     </section>
     <section>
-      <%= render 'shared/background_user_info' %>
+      <%= render 'shared/background_user_info'  %>
     </section>
     <section>
-      <%= render 'shared/stats' %>
+      <%= render 'shared/stats'                 %>
     </section>
   </aside>
   <div class="span8">
     <%= render 'follow_form' if signed_in? %>
     <% if @user.scrawls.any? %>
-      <h3>Scrawls (<%= @user.scrawls.count %>)</h3>
+      <h3>Scrawls </h3>
       <ol class="scrawls">
         <%= render @scrawls %>
       </ol>

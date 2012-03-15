@@ -1,0 +1,11 @@
+<li>
+  <span class="content"><%= scrawl.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words scrawl.created_at %> ago.
+  </span>
+  <% if current_user?(scrawl.user) %>
+    <%= link_to "delete", scrawl, method:  :delete,
+                                     confirm: "You sure?",
+                                     title:   scrawl.content %>
+  <% end %>
+</li>

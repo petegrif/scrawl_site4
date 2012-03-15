@@ -1,3 +1,4 @@
+<% provide(:title, 'Scrawls') %>
 <div class="row">
   <aside class="span4">
     <section>
@@ -14,11 +15,11 @@
   </aside>
   <div class="span8">
     <h3><%= yield(:title) %></h3>
-    <% if @users.any? %>
-      <ul class="users">
-        <%= render @users %>
-      </ul>
-      <%= will_paginate @users %>
+    <% if @user.scrawls.any? %>
+      <ol class="scrawls">
+        <%= render @scrawls %>
+      </ol>
+      <%= will_paginate @scrawls %>
     <% end %>
   </div>
 </div>

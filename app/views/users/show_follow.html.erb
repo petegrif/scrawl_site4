@@ -1,10 +1,10 @@
 <div class="row">
   <aside class="span4">
     <section>
-      <%= gravatar_for @user %>
-      <h1><%= @user.name %></h1>
-      <span><%= link_to "view my profile", @user %></span>
-      <span><b>Scrawls:</b> <%= @user.scrawls.count %></span>
+      <%= render 'shared/grav_name' %>
+    </section>
+    <section>
+      <%= render 'shared/background_user_info' %>
     </section>
     <section>
       <%= render 'shared/stats' %>

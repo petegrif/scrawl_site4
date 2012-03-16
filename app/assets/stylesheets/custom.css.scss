@@ -14,7 +14,6 @@ $grayMediumLight: #eaeaea;
 
 /* ==================================================== */
 
-
 /* universal */
 
 
@@ -72,70 +71,11 @@ p {
 }
 
 /* ==================================================== */
-
-/* sidebar */
-
-
-.stats {
-  overflow: auto;
-  a {
-    float: left;
-    padding: 0 10px;
-    border-left: 1px solid $grayLighter;
-    color: gray;
-    &:first-child {
-      padding-left: 0;
-      border: 0;
-    }
-    &:hover {
-      text-decoration: none;
-      color: $blue;
-    }
-  }
-  strong {
-    display: block;
-  }
-}
-
-.user_avatars {
-  overflow: auto;
-  margin-top: 10px;
-  .gravatar {
-    margin: 1px 1px;
-  }
-}
-
-aside {
-  section {
-    padding: 10px 0;
-    border-top: 1px solid $grayLighter;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.6em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-    }
-  }
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
 /* ==================================================== */
 
-/* header */
+/* HEADER & FOOTER */
 
+/* header */
 
 #logo {
   float: left;
@@ -153,10 +93,7 @@ aside {
   }
 }
 
-/* ==================================================== */
-
 /* footer */
-
 
 footer {
   margin-top: 45px;
@@ -182,6 +119,121 @@ footer {
   }
 }
 
+/* ==================================================== */
+/* ==================================================== */
+
+/* HOME PAGE */
+
+/* just a 4span sidebar for gravitar and stats */
+/* maybe include box for composing messages ? */
+/* then another 4span (? - may be bigger) to right for scrawls */
+
+/* aside is currently used for home page which is correct */
+/* but I don't want it for users, apps, followers, following */
+/* need to define something that displays core into at top of page */
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.6em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+    }
+  }
+}
+
+/* sidebar */
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.stats {
+  overflow: auto;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $grayLighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
+/* then just display scrawls */
+
+/* ==================================================== */
+/* ==================================================== */
+
+/* PROFILE PAGE */
+
+/* NOW HERE I WANT TO DEFINE A STYLE FOR PROFILE PAGE TEMPLATE  */
+/* the stuff below is not part of home & should be part of that */
+
+/* atop is for content at top of page */
+/* common to profile page w scrawls, followers, following & apps */
+
+atop {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.6em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+    }
+  }
+}
+
+/* other info on LHS */
+
+/* .user_avatars - for following & followers */
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+}
+
+/* then user's scrawls, following, followers & apps */
+
+
+
+/* ==================================================== */
 /* ==================================================== */
 
 /* forms */

@@ -1,5 +1,7 @@
 @import "bootstrap";
 
+/* ==================================================== */
+
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -10,7 +12,11 @@ $grayMediumLight: #eaeaea;
   box-sizing: border-box;
 }
 
+/* ==================================================== */
+
+
 /* universal */
+
 
 html {
   overflow-y: scroll;
@@ -35,7 +41,10 @@ textarea {
   }
 }
 
+/* ==================================================== */
+
 /* typography */
+
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -61,6 +70,8 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+
+/* ==================================================== */
 
 /* sidebar */
 
@@ -121,8 +132,10 @@ aside {
   margin-right: 10px;
 }
 
+/* ==================================================== */
 
 /* header */
+
 
 #logo {
   float: left;
@@ -140,7 +153,10 @@ aside {
   }
 }
 
+/* ==================================================== */
+
 /* footer */
+
 
 footer {
   margin-top: 45px;
@@ -166,17 +182,10 @@ footer {
   }
 }
 
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
+/* ==================================================== */
 
 /* forms */
+
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
@@ -200,7 +209,10 @@ input, textarea, select, .uneditable-input {
   @extend .error;
  }
 
+/* ==================================================== */
+
  /* users index */
+
 
 .users {
   list-style: none;
@@ -215,7 +227,10 @@ input, textarea, select, .uneditable-input {
   }
 }
 
-/* apps */
+/* ==================================================== */
+
+/* apps index */
+
 
 .apps {
   list-style: none;
@@ -230,7 +245,10 @@ input, textarea, select, .uneditable-input {
   }
 }
 
+/* ==================================================== */
+
 /* scrawls */
+
 
 .scrawls {
   list-style: none;
@@ -257,5 +275,19 @@ aside {
     margin-bottom: 5px;
   }
 }
+
+/* ==================================================== */
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+
 
 

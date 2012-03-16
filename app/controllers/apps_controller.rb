@@ -19,7 +19,7 @@ class AppsController < ApplicationController
      @app = App.new(params[:app])
      if @app.save
         flash[:success] = "App saved!"
-        redirect_to @user
+        redirect_to root_path
      else
         flash[:error] = "Couldn't save app."
         render 'new'

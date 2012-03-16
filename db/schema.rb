@@ -1,4 +1,4 @@
-ActiveRecord::Schema.define(:version => 20120315221437) do
+ActiveRecord::Schema.define(:version => 20120316173452) do
 
   create_table "apps", :force => true do |t|
     t.string   "name"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20120315221437) do
     t.boolean  "enabled",         :default => false
   end
 
-  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
+  add_index "users", ["email"],           :name => "index_users_on_email", :unique => true
+  add_index "users", ["remember_token"],  :name => "index_users_on_remember_token"
 
 end

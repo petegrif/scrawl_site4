@@ -1,0 +1,14 @@
+<% provide(:title, "Edit App") %> 
+<h1>Edit App</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@app) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <%= render 'fields', f: f %>
+      <%= f.submit "Save changes", :class => "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+

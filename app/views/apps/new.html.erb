@@ -1,0 +1,13 @@
+<% provide(:title, 'Enter new App') %>
+<h1>Enter new App Details</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@app) do |f| %>
+    	<%= render 'shared/error_messages', object: f.object %>
+      	<%= render 'fields', f: f %> <br /><br />
+      	<%= f.submit "Create new App", :class => "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

@@ -1,0 +1,5 @@
+<li>
+	<%= image_tag(app.image_url, alt: "app.name", class: "round") %>
+	<strong><%= link_to app.name, app_path(app) %><br /></strong>
+	<%= app.description %> <br />
+</li>

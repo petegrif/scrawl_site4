@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120315053531) do
+ActiveRecord::Schema.define(:version => 20120315221437) do
+
+  create_table "apps", :force => true do |t|
+    t.string   "name"
+    t.string   "version"
+    t.string   "description"
+    t.string   "tags"
+    t.string   "image_url"
+    t.string   "longdescription"
+    t.boolean  "enabled",         :default => true
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+  end
 
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"
@@ -36,8 +48,8 @@ ActiveRecord::Schema.define(:version => 20120315053531) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           :default => false

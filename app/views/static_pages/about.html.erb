@@ -1,5 +1,33 @@
 <% provide(:title, 'About Us') %>
-<h1>About Us</h1>
-<p>
-  About Scrawl here.
+<h1>Scrawl is Facebook on steroids</h1>
+<%= image_tag("fb_on_steroids.png", alt: "Facebook on Steroids", class: "round") %>
+<br></p>
+<b>FACEBOOK'S COOL...BUT IT'S NOT PERFECT.</b>
 </p>
+<p>
+<i>No ‘dislike' button:</i> For that matter there’s no ‘whatever,’ ‘who cares,’ ‘poor baby,’ or ‘that sucks’ buttons.  But the real world isn't 'the land of the nice happy people' and if something sucks  I want to say so.
+</p>
+<p>
+<i>Crippled comments:</i> You can only comment where FB lets you. If they put a little box on the page to comment or upload something...I can have my say.  If they haven't...tough.  But why can't I say what I want wherever I want?  Why can't I write on a photo?  Or lay some audio on a friend's status update?
+</p>
+<p><b>
+SCRAWL POWERS UP FACEBOOK WITH...
+</p></b>
+<p>
+<i>Megabuttons:</i> The buttons you always wanted: ‘dislike', ‘whatever’, ‘who cares’, ‘poor baby’
+</p>
+<p>
+<i>Powercomments:</i> Say goodbye to little boxes.  Comment on whatever you like, wherever you like, however you like.  And share it with whoever you want.
+</p>
+<ul>
+	<li>add a customised speech bubble to someone in a photo</li>
+	<li> add a sound clip to a photo</li>
+	<li> attach crazy clip art or video to anything on the newsfeed</li>
+	<li> and more...much much more.</li>
+</ul>
+</p>
+</p>
+<% if !signed_in? %>
+<%= link_to "Request an Invite!", new_admin_user_path, class: "request_invite_button round" %>
+<% end %>
+

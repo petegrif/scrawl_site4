@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.all
   end
 
   def edit
@@ -57,14 +57,14 @@ class UsersController < ApplicationController
   def following
     @title = "Following"
     @user = User.find(params[:id])
-    @users = @user.followed_users.paginate(page: params[:page])
+    @users = @user.followed_users.all
     render 'show_following'
   end
 
   def followers
     @title = "Followers"
     @user = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page])
+    @users = @user.followers.all
     render 'show_followers'
   end
 

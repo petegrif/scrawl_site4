@@ -17,7 +17,6 @@ def make_users
     name  = Faker::Name.name
      email = "example-#{n+1}@scrawl.com"
      password  = "password"
-     password_confirmation = "password")
      User.create!(name: name,
                  email: email,
                  password: password,
@@ -26,7 +25,7 @@ def make_users
 end
 
 def make_scrawls
-  users = User.all(limit: 6)
+  users = User.all(limit: 10)
   50.times do
     content = Faker::Lorem.sentence(5)
     users.each { |user| user.scrawls.create!(content: content) }
@@ -41,5 +40,11 @@ def make_relationships
   followed_users.each { |followed| user.follow!(followed) }
   followers.each      { |follower| follower.follow!(user) }
 end
+
+
+
+
+
+
 
 

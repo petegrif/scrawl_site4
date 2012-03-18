@@ -8,17 +8,20 @@
 <ul class="nav nav-tabs nav-stacked">
   <li>
     <a href="<%= user_path %>">
-        SCRAWLS <strong><%= @user.scrawls.count %></strong>
+        <strong><%= @user.scrawls.count %></strong>
+        <rhnav>SCRAWLS</rhnav> 
     </a>
   </li>
   <li>
     <a href="<%= following_user_path(@user)%>">
-        FOLLOWING <strong><%= @user.followed_users.count %></strong>
+        <strong><%= @user.followed_users.count %></strong> 
+        <rhnav>FOLLOWING</rhnav> 
     </a>
   </li>
   <li>
     <a href="<%= followers_user_path(@user)%>">
-        FOLLOWERS <strong><%= @user.followers.count %></strong>
+        <strong><%= @user.followers.count %></strong>
+        <rhnav>FOLLOWERS</rhnav> 
     </a>
   </li>
 </ul>

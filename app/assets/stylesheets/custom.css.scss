@@ -187,16 +187,8 @@ aside {
 /* ==================================================== */
 
 /* PROFILE PAGE */
-
-/* NOW HERE I WANT TO DEFINE A STYLE FOR PROFILE PAGE TEMPLATE  */
-/* the stuff below is not part of home & should be part of that */
-
-/* 'template' consists of top block with profile into by gravatar & rhs nav */
+/* consists of top block with profile into by gravatar & rhs nav */
 /* side nav common to profile page w scrawls, followers, following & apps */
-
-
-/* info on LHS */
-/* scrawls, following, followers menu */
 
 /* .user_avatars - for following & followers */
 
@@ -208,36 +200,29 @@ aside {
   }
 }
 
-/* nav info on RHS */
-/* edit profile button & stats */
+/* profile username header */
 
-/* rhnav DOESN'T WORK */
+ph {
+  line-height: 1;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
 
-.rhnav {
-  overflow: auto;
-  a {
-    float: right;
-    padding: 0 10px;
-    border-left: 1px solid $grayLighter;
-    color: gray;
-    &:first-child {
-      padding-left: 0;
-      border: 0;
-    }
-    &:hover {
-      text-decoration: none;
-      color: $blue;
-    }
-  }
-  strong {
-    display: block;
-  }
+/* rh nav - scrawls, followers,following */
+
+rhnav {
+  line-height: 1;
+  font-size: 6pt;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 /* then user's scrawls, following, followers & apps */
 
 /* scrawls */
-
 
 .scrawls {
   list-style: none;

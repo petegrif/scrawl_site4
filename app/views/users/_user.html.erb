@@ -1,6 +1,17 @@
 <li>
-  <%= gravatar_for user, size: 52 %>
+  <%= gravatar_for user, size: 62 %>
   <%= link_to user.name, user %> 
-  <%= user.handle %><br />
-  <%= user.tagline %>
+<i>
+<%= user.handle	%><br />
+</i>
+<%= user.tagline	%><br />
+<i>
+<%= user.likes		%>
+<%= user.dislikes	%><br />
+</i>
+<%= user.location	%>
+<i>
+www.facebook.com/<%= user.fb_url %>
 </li>
+
+

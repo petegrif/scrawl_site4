@@ -1,6 +1,10 @@
 <% provide(:title, 'All users') %>
 <h1>Users</h1>
 
-<ul class="users">
-  <%= render @users %>
-</ul>
+<div class="row">
+  <div class="span8 offset4">
+	<ul class="apps">
+	    <%= render @users %>
+	</ul>
+  </div>
+</div>

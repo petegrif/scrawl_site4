@@ -1,12 +1,14 @@
 <a href="<%= user_path %>">
-  <%= gravatar_for @user, size: 150 %>
+  <%= gravatar_for @user, size: 130 %>
 </a>
-<h1>
+<h2>
   <%= @user.name %>
-</h1>
-	<%= @user.handle	%>
-	<%= @user.tagline	%>
-	<%= @user.location	%>
+</h2>
+	<%= @user.handle	%><br />
+	<%= @user.tagline	%><br />
+	<i>
 	<%= @user.likes		%>
-	<%= @user.dislikes	%>
+	<%= @user.dislikes	%><br />
+	</i>
+	<%= @user.location	%>
 	

@@ -1,18 +1,12 @@
 <% provide(:title, @user.name) %>
+
+<%= render 'shared/gen_profile_info' %>
+
 <div class="row">
-  <aside class="span4">
-    <section>
-      <%= render 'shared/grav_name'             %>
-    </section>
-    <section>
-      <%= render 'shared/background_user_info'  %>
-    </section>
-    <section>
-      <%= render 'shared/stats'                 %>
-    </section>
-  </aside>
+  <div class="span4">
+    <section><%= render 'shared/profile_lh_nav' %></section>
+  </div>
   <div class="span8">
-    <%= render 'follow_form' if signed_in? %>
     <% if @user.scrawls.any? %>
       <h3>Scrawls </h3>
       <ol class="scrawls">
@@ -21,3 +15,4 @@
     <% end %>
   </div>
 </div>
+

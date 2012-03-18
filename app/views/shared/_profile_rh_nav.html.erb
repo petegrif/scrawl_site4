@@ -1,0 +1,26 @@
+
+<% if @user.email == current_user.email %>
+  <%= link_to "Edit Your Profile", edit_user_path, class: "btn btn btn" %>
+<% else %>
+  <%= render 'follow_form' if signed_in? %>
+<% end %>
+
+<ul class="nav nav-tabs nav-stacked">
+  <li>
+    <a href="<%= user_path %>">
+        SCRAWLS <strong><%= @user.scrawls.count %></strong>
+    </a>
+  </li>
+  <li>
+    <a href="<%= following_user_path(@user)%>">
+        FOLLOWING <strong><%= @user.followed_users.count %></strong>
+    </a>
+  </li>
+  <li>
+    <a href="<%= followers_user_path(@user)%>">
+        FOLLOWERS <strong><%= @user.followers.count %></strong>
+    </a>
+  </li>
+</ul>
+
+

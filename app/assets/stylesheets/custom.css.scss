@@ -16,7 +16,6 @@ $grayMediumLight: #eaeaea;
 
 /* universal */
 
-
 html {
   overflow-y: scroll;
 }
@@ -124,13 +123,13 @@ footer {
 
 /* HOME PAGE */
 
-/* just a 4span sidebar for gravitar and stats */
+/* 4span sidebar for gravitar and stats */
 /* maybe include box for composing messages ? */
 /* then another 4span (? - may be bigger) to right for scrawls */
 
 /* aside is currently used for home page which is correct */
-/* but I don't want it for users, apps, followers, following */
-/* need to define something that displays core into at top of page */
+/* but I don't want it for profile - users, apps, followers, following */
+/* need to define something that displays core info at top of page */
 
 aside {
   section {
@@ -182,7 +181,7 @@ aside {
   }
 }
 
-/* then just display scrawls */
+/* then home page just displays scrawls */
 
 /* ==================================================== */
 /* ==================================================== */
@@ -192,32 +191,12 @@ aside {
 /* NOW HERE I WANT TO DEFINE A STYLE FOR PROFILE PAGE TEMPLATE  */
 /* the stuff below is not part of home & should be part of that */
 
-/* atop is for content at top of page */
-/* common to profile page w scrawls, followers, following & apps */
+/* 'template' consists of top block with profile into by gravatar & rhs nav */
+/* side nav common to profile page w scrawls, followers, following & apps */
 
-atop {
-  section {
-    padding: 10px 0;
-    border-top: 1px solid $grayLighter;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.6em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-    }
-  }
-}
 
-/* other info on LHS */
+/* info on LHS */
+/* scrawls, following, followers menu */
 
 /* .user_avatars - for following & followers */
 
@@ -229,15 +208,71 @@ atop {
   }
 }
 
+/* nav info on RHS */
+/* edit profile button & stats */
+
+/* rhnav DOESN'T WORK */
+
+.rhnav {
+  overflow: auto;
+  a {
+    float: right;
+    padding: 0 10px;
+    border-left: 1px solid $grayLighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+
 /* then user's scrawls, following, followers & apps */
 
+/* scrawls */
 
+
+.scrawls {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+
+.content {
+  display: block;
+}
+
+.timestamp {
+  color: $grayLight;
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
 
 /* ==================================================== */
 /* ==================================================== */
 
 /* forms */
-
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
@@ -265,7 +300,6 @@ input, textarea, select, .uneditable-input {
 
  /* users index */
 
-
 .users {
   list-style: none;
   margin: 0;
@@ -283,7 +317,6 @@ input, textarea, select, .uneditable-input {
 
 /* apps index */
 
-
 .apps {
   list-style: none;
   margin: 0;
@@ -299,8 +332,7 @@ input, textarea, select, .uneditable-input {
 
 /* ==================================================== */
 
-/* scrawls */
-
+/* scrawls index + feed */
 
 .scrawls {
   list-style: none;
@@ -311,16 +343,23 @@ input, textarea, select, .uneditable-input {
     border-top: 1px solid #e8e8e8;
   }
 }
+
+
+/* ==================================================== */
+
 .content {
   display: block;
 }
+
 .timestamp {
   color: $grayLight;
 }
+
 .gravatar {
   float: left;
   margin-right: 10px;
 }
+
 aside {
   textarea {
     height: 100px;
